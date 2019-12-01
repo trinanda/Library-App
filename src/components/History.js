@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {View, Text, Content, Container} from 'native-base';
-import HeaderScreen from './shared/HeaderScreens';
+import HeaderScreen from './shared/HeaderScreen';
 import FooterScreen from './shared/FooterScreen';
 import {Image} from 'react-native';
 

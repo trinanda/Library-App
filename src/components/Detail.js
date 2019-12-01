@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Image} from 'react-native';
 import {Container, Content, Thumbnail, Text, Button, View} from 'native-base';
-import HeaderScreen from './shared/HeaderScreens';
+import HeaderScreen from './shared/HeaderScreen';
 import Axios from 'axios';
 
 export default class Detail extends Component {
@@ -24,12 +24,15 @@ export default class Detail extends Component {
     const {data} = this.state;
     return (
       <Container>
-        <HeaderScreen navigation={this.props.navigation} />
         {data.length === 0 ? (
           <Text>Loading</Text>
         ) : (
           data.map((item, index) => (
-            <Content>
+            <Content key={index}>
+              <HeaderScreen
+                navigation={this.props.navigation}
+                title={item.name}
+              />
               <View>
                 <Image
                   source={{

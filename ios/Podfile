@@ -36,6 +36,12 @@ target 'Library_App2' do
 
   pod 'react-native-config', :path => '../node_modules/react-native-config'
 
+  pod 'RNReanimated', :path => '../node_modules/react-native-reanimated'
+
+  pod 'RNGestureHandler', :path => '../node_modules/react-native-gesture-handler'
+
+  pod 'RNScreens', :path => '../node_modules/react-native-screens'
+
   target 'Library_App2Tests' do
     inherit! :search_paths
     # Pods for testing

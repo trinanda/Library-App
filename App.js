@@ -5,7 +5,6 @@
  * @format
  * @flow
  */
-
 import React from 'react';
 import {View} from 'react-native';
 import {createAppContainer} from 'react-navigation';

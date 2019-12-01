@@ -1,36 +1,15 @@
 import React, {Component} from 'react';
-import {
-  Container,
-  Text,
-  Header,
-  Item,
-  Icon,
-  Button,
-  Input,
-  Left,
-  Content,
-  View,
-} from 'native-base';
+import {Container, Text, Content, View} from 'native-base';
 import Popular from './Popular';
 import Genre from './Genre';
 import FooterScreen from '../shared/FooterScreen';
+import HeaderSearch from '../shared/HeaderSearch';
 
 export default class Home extends Component {
   render() {
     return (
       <Container>
-        <Header searchBar rounded style={{backgroundColor: 'white'}}>
-          <Left>
-            <Text style={{fontWeight: 'bold', fontSize: 20}}>BOOK</Text>
-          </Left>
-          <Item>
-            <Icon name="ios-search" />
-            <Input placeholder="Search" />
-          </Item>
-          <Button transparent>
-            <Text> Search </Text>
-          </Button>
-        </Header>
+        <HeaderSearch navigation={this.props.navigation} />
         <Content>
           <Genre navigation={this.props.navigation} />
           <View style={{marginTop: 10}}>
@@ -40,7 +19,7 @@ export default class Home extends Component {
           </View>
           <Popular navigation={this.props.navigation} />
         </Content>
-        <FooterScreen />
+        <FooterScreen navigation={this.props.navigation} />
       </Container>
     );
   }

@@ -1,17 +1,24 @@
 import React, {Component} from 'react';
 import {Footer, FooterTab, Button, Icon} from 'native-base';
-export default class FooterScreen extends Component {
+import {withNavigation} from 'react-navigation';
+
+class FooterScreen extends Component {
   render() {
     return (
       <Footer style={{elevation: 150}}>
         <FooterTab style={{backgroundColor: 'white'}}>
-          <Button style={{backgroundColor: 'white'}}>
+          <Button
+            style={{backgroundColor: 'white'}}
+            onPress={() => this.props.navigation.navigate('Home')}>
             <Icon name="home" style={{color: 'black'}} />
           </Button>
-          <Button active style={{backgroundColor: 'white'}}>
+          <Button
+            active
+            style={{backgroundColor: 'white'}}
+            onPress={() => this.props.navigation.navigate('History')}>
             <Icon active name="timer" color="black" style={{color: 'black'}} />
           </Button>
-          <Button>
+          <Button onPress={() => this.props.navigation.navigate('Home')}>
             <Icon name="person" style={{color: 'black'}} />
           </Button>
         </FooterTab>
@@ -19,3 +26,4 @@ export default class FooterScreen extends Component {
     );
   }
 }
+export default withNavigation(FooterScreen);
