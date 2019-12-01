@@ -13,9 +13,8 @@ import {
 } from 'native-base';
 import Popular from './Popular';
 import Genre from './Genre';
-import FooterScreen from '../FooterScreen';
+import FooterScreen from '../shared/FooterScreen';
 
-// const Home = () => {
 export default class Home extends Component {
   render() {
     return (
@@ -33,7 +32,7 @@ export default class Home extends Component {
           </Button>
         </Header>
         <Content>
-          <Genre />
+          <Genre navigation={this.props.navigation} />
           <View style={{marginTop: 10}}>
             <Text style={{fontWeight: 'bold', fontSize: 24, paddingLeft: 10}}>
               Popular Books

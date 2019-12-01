@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Image} from 'react-native';
 import {Container, Content, Thumbnail, Text, Button, View} from 'native-base';
-import HeaderScreen from '../HeaderScreens';
+import HeaderScreen from './shared/HeaderScreens';
 import Axios from 'axios';
 
 export default class Detail extends Component {

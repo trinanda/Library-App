@@ -1,10 +1,5 @@
 import React, {Component} from 'react';
-import {
-  Footer,
-  FooterTab,
-  Button,
-  Icon,
-} from 'native-base';
+import {Footer, FooterTab, Button, Icon} from 'native-base';
 export default class FooterScreen extends Component {
   render() {
     return (

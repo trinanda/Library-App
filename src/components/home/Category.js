@@ -10,7 +10,7 @@ import {View, Card, CardItem} from 'native-base';
 import Axios from 'axios';
 import Config from 'react-native-config';
 
-const Item = ({title, writer, image, id, navigation}) => {
+const Item = ({title, writer, image, navigation}) => {
   return (
     <SafeAreaView>
       <TouchableOpacity style={{padding: 10}} onPress={navigation}>
@@ -41,12 +41,15 @@ export default class Popular extends Component {
       entries: [],
     };
   }
+
   componentDidMount() {
-    Axios.get(Config.API_URL).then(res => {
-      const library = res.data;
-      console.log(library);
-      this.setState({entries: res.data});
-    });
+    Axios.get(
+      Config.API_URL +
+        '/categories/' +
+        this.props.navigation.getParam('category', 'NO-CATEGORY'),
+    )
+      .then(response => this.setState({entries: response.data}))
+      .catch(error => console(error));
   }
 
   render() {

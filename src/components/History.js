@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {View, Text, Content, Container} from 'native-base';
-import HeaderScreen from './HeaderScreens';
-import FooterScreen from './FooterScreen';
+import HeaderScreen from './shared/HeaderScreens';
+import FooterScreen from './shared/FooterScreen';
 import {Image} from 'react-native';
 
 export default class History extends Component {

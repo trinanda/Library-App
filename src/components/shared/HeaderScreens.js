@@ -1,14 +1,5 @@
 import React, {Component} from 'react';
-import {
-  Header,
-  Left,
-  Body,
-  Right,
-  Title,
-  Icon,
-  View,
-  Button,
-} from 'native-base';
+import {Header, Left, Body, Right, Title, Icon, View} from 'native-base';
 import {TouchableOpacity} from 'react-native';
 export default class HeaderScreen extends Component {
   render() {
